@@ -16,17 +16,18 @@
 	</head>
 
 	<style>
-		table, th, td{
-			border: 1px solid black;
+		tr,td{
+			width: 5px;
 		}
 	</style>
 
 	<body>
 
 	<?php include "topButton.php"; ?>
-	
-		<h1>List Events</h1>
-		<table>
+		
+		<br><br>
+		<h1>活動列表</h1>
+		<table class="table table-striped">
 			<tr>
 				<td style="text-align:center">Event Name</td>
 				<td style="text-align:center">Ticket Price</td>
