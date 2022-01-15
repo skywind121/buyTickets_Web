@@ -5,6 +5,13 @@
 
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    
+        <style type = "text/CSS">
+            .table{
+                width: 500px;
+            }
+	    </style>
+
     </head>
 
  
@@ -20,16 +27,12 @@
         </a>
         <br><br>
 
-        <table class="table table-hover">
-
-        </table>
-
         <?php
 
         include "db_conn.php";
 
         echo "
-        <table border = '1'>
+        <table border = '1' class = 'table table-striped'>
         <tr>
         <th>姓名</th>
         <th>年齡</th>
