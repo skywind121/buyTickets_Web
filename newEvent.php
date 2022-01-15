@@ -20,7 +20,7 @@
     <?php include "topButton.php"; ?>
 
     <div class="wrapper">
-        <h2>舉辦活動</h2>
+        <h1><b>舉辦活動</b></h1>
         <p>請先輸入完整資訊以舉辦新的活動。</p>
 
         <?php
