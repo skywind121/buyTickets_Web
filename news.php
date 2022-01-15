@@ -1,17 +1,12 @@
 <html>
 
 <head>
+
     <meta http-equiv="Content-Type" content="text/html" ; charset="utf-8">
     <title>公告</title>
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-    <style type="text/CSS">
-        .table{
-                width: 500px;
-            }
-	    </style>
 
 </head>
 
@@ -45,15 +40,15 @@
 
                     <li class="nav-item dropdown">
                         <a class="navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="h3 mx-1"><b>
-                                    節目資訊
+                                    活動資訊
                                 </b><span class="h3 mx-1"></a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="http://localhost/newEvent.php">舉辦活動</a></li>
+                            <li><a class="dropdown-item" href="#">查看所有活動</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">查看已購票的活動</a></li>
                         </ul>
                     </li>
 
@@ -64,7 +59,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="navbar-brand" aria-current="page" href="http://localhost/New.php"><span class="h3 mx-1"><b>
+                        <a class="navbar-brand" aria-current="page" href="http://localhost/createAccount.php"><span class="h3 mx-1"><b>
                                     註冊
                                 </b></span></a>
                     </li>

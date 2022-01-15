@@ -66,15 +66,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <li class="nav-item dropdown">
                         <a class="navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="h3 mx-1"><b>
-                                    節目資訊
+                                    活動資訊
                                 </b><span class="h3 mx-1"></a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="http://localhost/newEvent.php">舉辦活動</a></li>
+                            <li><a class="dropdown-item" href="#">查看所有活動</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="#">查看已購票的活動</a></li>
                         </ul>
                     </li>
 
@@ -85,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </li>
 
                     <li class="nav-item">
-                        <a class="navbar-brand" aria-current="page" href="http://localhost/New.php"><span class="h3 mx-1"><b>
+                        <a class="navbar-brand" aria-current="page" href="http://localhost/createAccount.php"><span class="h3 mx-1"><b>
                                     註冊
                                 </b></span></a>
                     </li>
@@ -110,22 +110,101 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         ?>
 
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group">
-                <label>帳號</label>
-                <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>">
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default"><b>帳號</b></span>
+                <input type="text" name="username" placeholder="請輸入帳號" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>">
                 <span class="invalid-feedback"><?php echo $username_err; ?></span>
             </div><br>
-            <div class="form-group">
-                <label>密碼</label>
-                <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
+
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-default"><b>密碼</b></span>
+                <input type="password" name="password"  placeholder="請輸入密碼"  class="form-control  <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div><br>
-            <div class="form-group">
-                <input type="submit" class="btn btn-outline-dark" value="登入">
+
+            <div class="input-group" id="box2">
+                <span class="input-group-text" id="inputGroup-sizing-default"><b>圖形驗證碼</b></span>
+                <input type="tel" class="form-control" placeholder="請輸入圖形驗證碼" />
+                <span><canvas id="canvas" width="320" height="90"></canvas>
+                    <br><a href="#" id="changeImg">看不清，換一張</a></span>
+            </div>
+
+            <br><br>
+
+            <div class="input-group mb-3">
+                <input type="submit" class="btn btn-outline-dark btn-lg" value="登入">
             </div><br>
-            <p>還沒有帳號嗎？ <a href="createAccount.php">馬上註冊帳號</a></p>
+            <p>您還沒有帳號嗎？ <a href="createAccount.php">馬上註冊帳號</a></p>
         </form>
     </div>
+
+    <script>
+        /**生成一個隨機數**/
+        function randomNum(min, max) {
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+        /**生成一個隨機色**/
+        function randomColor(min, max) {
+            var r = randomNum(min, max);
+            var g = randomNum(min, max);
+            var b = randomNum(min, max);
+            return "rgb(" + r + "," + g + "," + b + ")";
+        }
+        drawPic();
+        document.getElementById("changeImg").onclick = function(e) {
+            e.preventDefault();
+            drawPic();
+        }
+
+        /**繪製驗證碼圖片**/
+        function drawPic() {
+            var canvas = document.getElementById("canvas");
+            var width = canvas.width;
+            var height = canvas.height;
+            var ctx = canvas.getContext('2d');
+            ctx.textBaseline = 'bottom';
+
+            /**繪製背景色**/
+            ctx.fillStyle = randomColor(180, 240); //顏色若太深可能導致看不清
+            ctx.fillRect(0, 0, width, height);
+
+            /**繪製文字**/
+            var str = 'ABCEFGHJKLMNPQRSTWXY123456789';
+            for (var i = 0; i < 4; i++) {
+                var txt = str[randomNum(0, str.length)];
+                ctx.fillStyle = randomColor(50, 160); //隨機生成字體顏色
+                ctx.font = randomNum(40, 70) + 'px SimHei'; //隨機生成字體大小
+                var x = 40 + i * 50;
+                var y = randomNum(75, 95);
+                var deg = randomNum(-35, 35);
+                //修改座標原點和旋轉角度
+                ctx.translate(x, y);
+                ctx.rotate(deg * Math.PI / 180);
+                ctx.fillText(txt, 0, 0);
+                //恢復座標原點和旋轉角度
+                ctx.rotate(-deg * Math.PI / 180);
+                ctx.translate(-x, -y);
+            }
+
+            /**繪製干擾線**/
+            for (var i = 0; i < 30; i++) {
+                ctx.strokeStyle = randomColor(40, 180);
+                ctx.beginPath();
+                ctx.moveTo(randomNum(0, width), randomNum(0, height));
+                ctx.lineTo(randomNum(0, width), randomNum(0, height));
+                ctx.stroke();
+            }
+            
+            /**繪製干擾點**/
+            for (var j = 0; j < 500; j++) {
+                ctx.fillStyle = randomColor(0, 255);
+                ctx.beginPath();
+                ctx.arc(randomNum(0, width), randomNum(0, height), 1, 0, 2 * Math.PI);
+                ctx.fill();
+            }
+        }
+    </script>
 </body>
 
 </html>
