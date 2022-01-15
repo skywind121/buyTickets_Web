@@ -30,7 +30,7 @@
                             </b><span class="h3 mx-1"></a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="http://localhost/newEvent.php">舉辦活動</a></li>
-                        <li><a class="dropdown-item" href="#">查看所有活動</a></li>
+                        <li><a class="dropdown-item" href="http://localhost/listEvents.php">查看所有活動</a></li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
