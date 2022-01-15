@@ -2,6 +2,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
         <title>HelloWorld</title>
+        <style type = "text/CSS">
+            body{
+                text-align: center;
+            }
+        </style>
     </head>
 
     <body>
@@ -9,11 +14,13 @@
         <a href="http://localhost/main.php" style="text-decoration:none;">
             <img src="/img/ticket.png" width="5%" height="10%" >
             <font color="black" size="6" >海大資工購票網</font>
-        </a>
-        |
+        </a>|
         <a href="http://localhost/news.php" style="text-decoration:none;">
             <font color="blue" size="6" ><b>公告</b></font>
-        </a>
+        </a>|
+        <a href="http://localhost/login.php" style="text-decoration:none;">
+            <font color="black" size="6" >登入</font>
+        </a>|
         <br><br>
         <?php
         include "db_conn.php";

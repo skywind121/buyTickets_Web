@@ -6,7 +6,7 @@
     //進行連線
     $db= mysqli_connect($localhost, $user, $password,$database);
     if(mysqli_connect_errno()){
-        printf("Connect failed:".mysqli_connect_error());
+        printf("Connect failed:".mysqli_connect_error());   
         exit();
     }
     mysqli_set_charset($db,"utf8");//設定編碼
