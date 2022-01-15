@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['login_user'] = $username;
 
             echo "Login Successful";
-            header("location: welcome.php");
+            header("location: main.php");
         } else {
             echo "Login Unsuccessful";
         }

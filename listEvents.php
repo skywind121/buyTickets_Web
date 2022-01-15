@@ -1,12 +1,3 @@
-<?php
-	include "session.php";
-
-	$query = "SELECT * FROM events";
-	if ($stmt = $db->query($query)) {
-		$result = $stmt->fetch_all();
-	}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
    
@@ -23,7 +14,13 @@
 
 	<body>
 
-	<?php include "topButton.php"; ?>
+	<?php 
+		include "topButton.php"; 
+		$query = "SELECT * FROM events";
+		if ($stmt = $db->query($query)) {
+			$result = $stmt->fetch_all();
+		}
+	?>
 		
 		<br><br>
 		<h1>活動列表</h1>

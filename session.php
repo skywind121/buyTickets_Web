@@ -1,6 +1,9 @@
 <?php
     include "db_conn.php";
-    session_start();
+    
+    if (!isset($_SESSION['login_user'])) {
+        session_start();
+    }
     
     $user_check = $_SESSION['login_user'];
     //echo $user_check;
@@ -9,8 +12,11 @@
     $login_session = $row['username'];
 
     
-    if (!isset($_SESSION['login_user'])) {
-        header("location:login.php");
-        die();
+    if (isset($_SESSION['login_user'])) {
+        //header("location:login.php");
+        //die();
+        echo "Hello," ;
+        echo $user_check;
+        echo "<a href = 'logout.php'>登出</a>";
     }
 ?>
