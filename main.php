@@ -1,15 +1,19 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
-        <title>HelloWorld</title>
+        <title>海大資工售票網</title>
     </head>
 
  
     <body>
 
-        <a href="http://localhost/main.php" style="text-decoration:none;">
+        <a href="http://localhost/main.php" style="text-decoration:none;"> 
             <img src="/img/ticket.png" width="5%" height="10%" >
-            <font color="red" size="6">海大資工購票網</font>
+            <font color="blue" size="6" ><b>海大資工購票網</b></font>
+        </a>
+        |
+        <a href="http://localhost/news.php" style="text-decoration:none;">
+            <font color="black" size="6" >公告</font>
         </a>
 
         <form action="ininsert.php" method="post">

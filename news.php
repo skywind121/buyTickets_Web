@@ -1,9 +1,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html"; charset="utf-8">
-        <title>HelloWorld</title>
+        <title>公告</title>
     </head>
 
+ 
     <body>
 
         <a href="http://localhost/main.php" style="text-decoration:none;">
@@ -15,18 +16,9 @@
             <font color="blue" size="6" ><b>公告</b></font>
         </a>
         <br><br>
+
         <?php
         include "db_conn.php";
-
-        $name   = $_POST["name"];
-        $age    = $_POST["age"];
-        $gender = $_POST["gender"];
-        $no     = $_POST["no"];
-
-        $query = ("insert into student values(?,?,?,?)");
-        $stmt = $db -> prepare($query);
-        $stmt -> bind_param("sisi", $name,$age,$gender,$no);
-        $stmt -> execute();
 
         echo "
         <table border = '1'>
@@ -50,6 +42,6 @@
         echo "</table>";
         ?>
 
-        <a href="http://localhost/main.php">返回</a>
     </body>
+  
 </html>
