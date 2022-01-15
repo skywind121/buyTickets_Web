@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php include "topButton.php"; ?>
 
     <div class="wrapper">
-        <h2>註冊</h2>
+        <h1><b>註冊</b></h1>
         <p>請填寫以下欄位以完成註冊。</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 
