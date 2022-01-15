@@ -11,16 +11,26 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+        <a href="http://localhost/main.php" style="text-decoration:none;">
+            <img src="/img/ticket.png" width="20%" height="20%">
+            <font color="white" size="6"><b>海大資工購票網</b></font>
+        </a>
+
         <div class="container-fluid">
+
             <a class="navbar-brand" href="#">首頁</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">公告</a>
+                        <a class="nav-link active" aria-current="page" href="http://localhost/news.php">
+                            公告
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">登入</a>
@@ -47,17 +57,9 @@
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
+
         </div>
     </nav>
-
-    <a href="http://localhost/main.php" style="text-decoration:none;">
-        <img src="/img/ticket.png" width="5%" height="10%">
-        <font color="blue" size="6"><b>海大資工購票網</b></font>
-    </a>
-    |
-    <a href="http://localhost/news.php" style="text-decoration:none;">
-        <font color="black" size="6">公告</font>
-    </a>
 
     <form action="ininsert.php" method="post">
         <br><br>
