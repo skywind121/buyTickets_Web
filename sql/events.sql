@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jan 15, 2022 at 12:11 PM
+-- Generation Time: Jan 16, 2022 at 03:11 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.1
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `events` (
-  `name` varchar(100) NOT NULL,
+  `eventname` varchar(100) NOT NULL,
   `ticketPrice` int(11) NOT NULL,
   `numTickets` int(11) NOT NULL,
   `eId` int(11) NOT NULL
@@ -38,8 +38,8 @@ CREATE TABLE `events` (
 -- Dumping data for table `events`
 --
 
-INSERT INTO `events` (`name`, `ticketPrice`, `numTickets`, `eId`) VALUES
-('第一個活動', 100, 50, 1),
+INSERT INTO `events` (`eventname`, `ticketPrice`, `numTickets`, `eId`) VALUES
+('第一個', 30, 50, 1),
 ('Second event', 50, 200, 2);
 
 --
