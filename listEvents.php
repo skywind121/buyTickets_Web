@@ -28,7 +28,7 @@
 	?>
 
 	<br><br>
-	<h1>活動列表</h1>
+	<h1><b>活動列表</b></h1>
 	<table class="table table-striped">
 		<tr>
 			<td style="text-align:center">活動名稱</td>
