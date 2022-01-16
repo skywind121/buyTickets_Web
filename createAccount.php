@@ -27,7 +27,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
+
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Option 1: Include in HTML -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
     <style>
         .wrapper {
             font: 14px sans-serif;
@@ -46,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p>請填寫以下欄位以完成註冊。</p>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
 
-        <div class="input-group mb-3">
+            <div class="input-group mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-default"><b>帳號</b></span>
                 <input type="text" name="username" placeholder="請輸入您想創建的帳號" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>">
                 <span class="invalid-feedback"><?php echo $username_err; ?></span>
@@ -54,13 +60,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             <div class="input-group mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-default"><b>密碼</b></span>
-                <input type="password" name="password"  placeholder="請輸入您想創建的密碼"  class="form-control  <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
+                <input type="password" name="password" placeholder="請輸入您想創建的密碼" class="form-control  <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div><br>
 
             <div class="input-group mb-3">
                 <span class="input-group-text" id="inputGroup-sizing-default"><b>確認密碼</b></span>
-                <input type="password" name="password_confirm"  placeholder="請再次輸入密碼"  class="form-control  <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
+                <input type="password" name="password_confirm" placeholder="請再次輸入密碼" class="form-control  <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div><br>
 

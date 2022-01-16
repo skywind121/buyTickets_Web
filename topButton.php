@@ -14,19 +14,19 @@
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 position-absolute top-50 start-50 translate-middle">
                 <li class="nav-item">
                     <a class="navbar-brand" aria-current="page" href="http://localhost/main.php"><span class="h3 mx-1"><b>
-                                首頁
+                                <i class="bi bi-house-door-fill"></i> 首頁
                             </b></span></a>
                 </li>
 
                 <li class="nav-item">
                     <a class="navbar-brand" aria-current="page" href="http://localhost/News.php"><span class="h3 mx-1"><b>
-                                公告
+                                <i class="bi bi-megaphone-fill"></i> 公告
                             </b></span></a>
                 </li>
 
                 <li class="nav-item dropdown">
                     <a class="navbar-brand dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span class="h3 mx-1"><b>
-                                活動資訊
+                                <i class="bi bi-info-circle-fill"></i> 活動資訊
                             </b><span class="h3 mx-1"></a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="http://localhost/newEvent.php">舉辦活動</a></li>
@@ -40,13 +40,13 @@
 
                 <li class="nav-item">
                     <a class="navbar-brand" aria-current="page" href="http://localhost/login.php"><span class="h3 mx-1"><b>
-                                登入
+                                <i class="bi bi-door-open-fill"></i> 登入
                             </b></span></a>
                 </li>
 
                 <li class="nav-item">
                     <a class="navbar-brand" aria-current="page" href="http://localhost/createAccount.php"><span class="h3 mx-1"><b>
-                                註冊
+                                <i class="bi bi-person-plus-fill"></i> 註冊
                             </b></span></a>
                 </li>
 
@@ -54,9 +54,9 @@
 
             <form class="d-flex position-absolute top-50 end-0 translate-middle-y">
                 <input class="form-control me-2" type="search" placeholder="輸入關鍵字" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <button class="btn btn-outline-success" type="submit">搜尋<i class="bi bi-search"></i></button>
             </form>
-            
+
         </div>
 
 
