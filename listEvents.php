@@ -38,7 +38,7 @@
 				<td style='text-align:center'>".$row[1]."</td>
 				<td style='text-align:center'>".$row[2]."</td>
 				<td style='text-align:center'>".$row[3]."</td>
-				<td style='text-align:center'>"."修改"."</td>
+				<td style='text-align:center'><a href='modifyEvents.php?id=".$row[3]."'>"."修改"."</td>
 				<td><a href=delEvent.php?id=".$row[3].">刪除</a></td>
 				<tr>";
 			}
