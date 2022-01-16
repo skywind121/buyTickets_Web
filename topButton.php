@@ -1,3 +1,5 @@
+<?php include "session.php"; ?>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
     <a href="http://localhost/main.php" style="text-decoration:none;">
@@ -34,21 +36,35 @@
                         <li>
                             <hr class="dropdown-divider">
                         </li>
-                        <li><a class="dropdown-item" href="#">查看已購票的活動</a></li>
+                        <li><a class="dropdown-item" href="http://localhost/listUserRecord.php">查看已購票的活動</a></li>
                     </ul>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item" id="loginButton">
                     <a class="navbar-brand" aria-current="page" href="http://localhost/login.php"><span class="h3 mx-1"><b>
                                 登入
                             </b></span></a>
                 </li>
 
-                <li class="nav-item">
+                <li class="nav-item" id="registerButtton">
                     <a class="navbar-brand" aria-current="page" href="http://localhost/createAccount.php"><span class="h3 mx-1"><b>
                                 註冊
                             </b></span></a>
                 </li>
+
+                <?php
+                if (isset($_SESSION['login_user'])) {
+                    echo "<li class='nav-item navbar-brand' aria-current='page'>
+                            <span class='h3 mx-1'><b>
+                                您好，";            
+                    echo $user_check;
+                    echo "</b></span></li>";
+                    echo "<a href = 'logout.php'>登出</a>";
+
+                }
+
+                ?>
+                
 
             </ul>
 
@@ -62,8 +78,6 @@
 
     </div>
 </nav>
-
-<?php include "session.php"; ?>
 
 <!-- Bootstrap JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
