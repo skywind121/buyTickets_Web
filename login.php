@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
             </div><br>
 
-            <div class="input-group" id="box2">
+            <div class="input-group">
                 <span class="input-group-text" id="inputGroup-sizing-default"><b>圖形驗證碼</b></span>
                 <input type="tel" id="checknumber" class="form-control" placeholder="請輸入圖形驗證碼" />
                 <span><canvas id="canvas" width="320" height="90"></canvas>
