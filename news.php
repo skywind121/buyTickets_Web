@@ -17,6 +17,7 @@
     </head>
 
     <body>
+    <?php include "topButton.php"; ?>
 
         <a href="http://localhost/main.php" style="text-decoration:none;">
             <img src="/img/ticket.png" width="5%" height="10%" >
