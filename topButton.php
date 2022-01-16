@@ -54,12 +54,18 @@
 
                 <?php
                 if (isset($_SESSION['login_user'])) {
-                    echo "<li class='nav-item navbar-brand' aria-current='page'>
-                            <span class='h3 mx-1'><b>
-                                您好，";
+                    echo "<li class='nav-item'>
+                            <a class='navbar-brand' aria-current='page' href='http://localhost/main.php'><span class='h3'><b>
+                                    <i class='bi bi-person-check-fill'></i> 您好，";
                     echo $user_check;
                     echo "</b></span></li>";
-                    echo "<a href = 'logout.php'>登出</a>";
+
+                    echo "<li class='nav-item'>
+                            <a href = 'logout.php'>
+                                <button type='button' class='btn btn-outline-info btn-sm text-nowrap'><span class='h4 mx-1'><b>
+                                    <i class='bi bi-door-closed-fill'></i> 登出
+                                </b></span></button></li>
+                            </a>";
                     echo "<style type = 'text/CSS'>
                     #loginButton, #registerButtton {
                        display:none;
@@ -74,7 +80,7 @@
 
             <form class="d-flex position-absolute top-50 end-0 translate-middle-y">
                 <input class="form-control me-2" type="search" placeholder="輸入關鍵字" aria-label="Search">
-                <button class="btn btn-outline-success text-nowrap" type="submit">搜尋 <i class="bi bi-search"></i></button>
+                <button class="btn btn-outline-success text-nowrap" type="submit"><b>搜尋 <i class="bi bi-search"></i></b></button>
             </form>
 
         </div>
