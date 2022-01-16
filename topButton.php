@@ -48,7 +48,7 @@
 
                 <li class="nav-item" id="registerButtton">
                     <a class="navbar-brand" aria-current="page" href="http://localhost/createAccount.php"><span class="h3 mx-1"><b>
-                                註冊
+                                <i class="bi bi-person-plus-fill"></i>註冊
                             </b></span></a>
                 </li>
 
