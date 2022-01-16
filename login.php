@@ -145,7 +145,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 
     <script>
-        const txtArray = []
+        var txtArray = []
 
         /**生成一個隨機數**/
         function randomNum(min, max) {
@@ -171,6 +171,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             var height = canvas.height;
             var ctx = canvas.getContext('2d');
             ctx.textBaseline = 'bottom';
+            txtArray = []
 
             /**繪製背景色**/
             ctx.fillStyle = randomColor(180, 240); //顏色若太深可能導致看不清
@@ -220,7 +221,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             console.log("checkcode is " + checkcode)
             //var a = regex.exec(checkcode);
             if (regex == checkcode) {
-                alert('圖形驗證碼正確無誤！！！');
+                alert('圖形驗證碼正確！！！');
             } else {
                 alert('圖形驗證碼錯誤，請更換一張圖形或重新輸入。');
             }
