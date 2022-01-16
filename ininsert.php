@@ -7,50 +7,42 @@
                 text-align: center;
             }
         </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     </head>
 
     <body>
 
-        <a href="http://localhost/main.php" style="text-decoration:none;">
-            <img src="/img/ticket.png" width="5%" height="10%" >
-            <font color="black" size="6" >海大資工購票網</font>
-        </a>|
-        <a href="http://localhost/news.php" style="text-decoration:none;">
-            <font color="blue" size="6" ><b>公告</b></font>
-        </a>|
-        <a href="http://localhost/login.php" style="text-decoration:none;">
-            <font color="black" size="6" >登入</font>
-        </a>|
+        <?php include "topButton.php"; ?>
         <br><br>
         <?php
         include "db_conn.php";
 
         $name   = $_POST["name"];
-        $age    = $_POST["age"];
-        $gender = $_POST["gender"];
-        $no     = $_POST["no"];
+        $ticketPrice    = $_POST["ticketPrice"];
+        $numTickets = $_POST["numTickets"];
+        $eId     = $_POST["eId"];
 
-        $query = ("insert into student values(?,?,?,?)");
+        $query = ("insert into events values(?,?,?,?)");
         $stmt = $db -> prepare($query);
-        $stmt -> bind_param("sisi", $name,$age,$gender,$no);
+        $stmt -> bind_param("siii", $name,$ticketPrice,$numTickets,$eId);
         $stmt -> execute();
 
         echo "
         <table border = '1'>
         <tr>
-        <th>姓名</th>
-        <th>年齡</th>
-        <th>性別</th>
-        <th>號碼</th>
+        <th>活動名稱</th>
+        <th>門票價錢</th>
+        <th>門票數量</th>
+        <th>活動編號</th>
         </tr>";
-        $query2 = "SELECT * FROM student";
+        $query2 = "SELECT * FROM events";
         if($stmt = $db -> query($query2)){
             while($result = mysqli_fetch_object($stmt)){
                 echo "<tr>";
                 echo "<td>".$result->name."</td>";
-                echo "<td>".$result->age."</td>";
-                echo "<td>".$result->gender."</td>";
-                echo "<td>".$result->no."</td>";
+                echo "<td>".$result->ticketPrice."</td>";
+                echo "<td>".$result->numTickets."</td>";
+                echo "<td>".$result->eId."</td>";
                 echo "</tr>";
             }
         }
