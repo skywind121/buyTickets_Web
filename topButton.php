@@ -60,7 +60,11 @@
                     echo $user_check;
                     echo "</b></span></li>";
                     echo "<a href = 'logout.php'>登出</a>";
-
+                    echo "<style type = 'text/CSS'>
+                    #loginButton, #registerButtton {
+                       display:none;
+                    }
+                    </style>";
                 }
 
                 ?>
