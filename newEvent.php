@@ -1,8 +1,4 @@
-<?php
-    if (!isset($_SESSION['login_user'])) {
-        header("location: login.php");
-    }
-?>
+
 <html>
 
 <head>
@@ -27,7 +23,10 @@
 
 <body>
 
-    <?php include "topButton.php"; ?>
+    <?php include "topButton.php";
+     if (!isset($_SESSION['login_user'])) {
+        header("location: login.php");
+    } ?>
 
     <div class="wrapper">
         <h1><b>舉辦活動</b></h1>
