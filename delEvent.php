@@ -1,10 +1,10 @@
 <?php
-  include('db_conn.php');
+  include "db_conn.php";
 
-  
-  $stmt = $db->prepare('delete from events where eId=?');
-  $stmt -> bind_param("i", $id);
+  $query = ("delete from events where eId=?");
+  $stmt = $db->prepare($query);
   $id = $_GET['id'];
+  $stmt -> bind_param("i", $id);
   $stmt -> execute();
 
   // 如果刪除成功

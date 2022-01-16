@@ -39,7 +39,7 @@
 				<td style='text-align:center'>".$row[2]."</td>
 				<td style='text-align:center'>".$row[3]."</td>
 				<td style='text-align:center'>"."修改"."</td>
-				<td><a href='delEvent.php?id='.$row[3].''>刪除</a></td>
+				<td><a href=delEvent.php?id=".$row[3].">刪除</a></td>
 				<tr>";
 			}
 		?>
