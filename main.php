@@ -25,7 +25,7 @@
 <body>
     <?php include "topButton.php"; ?>
 
-    <p class='mainText'>投入、享受、躍動</p>
+    <p class='mainText'><b>投入、享受、躍動</b></p>
 </body>
 
 </html>

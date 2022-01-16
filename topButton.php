@@ -11,7 +11,7 @@
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 position-absolute top-50 start-50 translate-middle">
                 <li class="nav-item">
                     <a class="navbar-brand" aria-current="page" href="http://localhost/main.php"><span class="h3 mx-1"><b>
                                 首頁
@@ -51,15 +51,19 @@
                 </li>
 
             </ul>
-            <form class="d-flex position-absolute bottom-0 end-0 translate-middle-x">
+
+            <form class="d-flex position-absolute top-50 end-0 translate-middle-y">
                 <input class="form-control me-2" type="search" placeholder="輸入關鍵字" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
+            
         </div>
+
+
     </div>
 </nav>
 
-<?php include "session.php";?>
+<?php include "session.php"; ?>
 
 <!-- Bootstrap JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
