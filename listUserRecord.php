@@ -24,7 +24,7 @@
 	?>
 		
 		<br><br>
-		<h1>活動列表</h1>
+		<h1>購票紀錄</h1>
 		<table class="table table-striped">
 			<tr>
 				<td style="text-align:center" >活動名稱</td>
@@ -33,8 +33,8 @@
 		<?php
 			foreach ($result as $row) {
 				echo "<tr>
+				<td style='text-align:center'>".$row[5]."</td>
 				<td style='text-align:center'>".$row[3]."</td>
-				<td style='text-align:center'>".$row[2]."</td>
 				<tr>";
 			}
 		?>
