@@ -27,8 +27,10 @@
 	}
 	?>
 
-	<br><br>
+	<br>
 	<h1><b>活動列表</b></h1>
+	<br>
+	
 	<table class="table table-striped">
 		<tr>
 			<td style="text-align:center">活動名稱</td>
