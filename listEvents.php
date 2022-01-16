@@ -7,8 +7,8 @@
 	</head>
 
 	<style>
-		tr,td{
-			width: 5px;
+		.table{
+			width: 500px;
 		}
 	</style>
 
@@ -26,13 +26,21 @@
 		<h1>活動列表</h1>
 		<table class="table table-striped">
 			<tr>
-				<td style="text-align:center">Event Name</td>
-				<td style="text-align:center">Ticket Price</td>
-				<td style="text-align:center">Number of Tickets</td>
+				<td style="text-align:center" >活動名稱</td>
+				<td style="text-align:center">門票價錢</td>
+				<td style="text-align:center">門票數量</td>
+				<td style="text-align:center">活動編號</td>
 			</tr>
 		<?php
 			foreach ($result as $row) {
-				echo "<tr><td style='text-align:center'>".$row[0]."</td><td style='text-align:center'>".$row[1]."</td><td style='text-align:center'>".$row[2]."</td><tr>";
+				echo "<tr>
+				<td style='text-align:center'>".$row[0]."</td>
+				<td style='text-align:center'>".$row[1]."</td>
+				<td style='text-align:center'>".$row[2]."</td>
+				<td style='text-align:center'>".$row[3]."</td>
+				<td style='text-align:center'>"."修改"."</td>
+				<td><a href='delEvent.php?id='.$row[3].''>刪除</a></td>
+				<tr>";
 			}
 		?>
 		</table>
