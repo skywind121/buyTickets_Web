@@ -35,7 +35,7 @@
 				echo "<tr><td style='text-align:center'>".$row[0]."</td><td style='text-align:center'>".$row[1]."</td><td style='text-align:center'>".$row[2]."</td><tr>";
 			}
 		?>
-	</table>
-</body>
-
+		</table>
+	</body>
+   
 </html>
