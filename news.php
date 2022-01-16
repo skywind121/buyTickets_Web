@@ -25,6 +25,31 @@
     <a class="navbar-brand" aria-current="page" href="http://localhost/addNews.php"><span class="h3 mx-1"><b>
                                 <i class="bi bi-person-plus-fill"></i> 新增公告
                             </b></span></a>
+
+
+    <?php
+	$query = "SELECT * FROM news";
+	if ($stmt = $db->query($query)) {
+		$result = $stmt->fetch_all();
+	}
+	?>
+
+	<br><br>
+	<h1>公告</h1>
+	<table class="table table-striped">
+		<tr>
+			<td style="text-align:center">標題</td>
+			<td style="text-align:center">内容</td>
+		</tr>
+		<?php
+		foreach ($result as $row) {
+			echo "<tr>
+				<td style='text-align:center'>" . $row[1] . "</td>
+				<td style='text-align:center'>" . $row[2] . "</td>
+				<tr>";
+		}
+		?>
+	</table>
 </body>
 
 </html>
