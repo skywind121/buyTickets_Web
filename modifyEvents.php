@@ -1,5 +1,8 @@
 <?php
     include "db_conn.php";
+    if (!isset($_SESSION['login_user'])) {
+        header("location: login.php");
+    }
 
     $id = $_GET['id'];
     $query = "SELECT * FROM events WHERE eId='$id'";
