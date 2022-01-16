@@ -74,7 +74,7 @@
 
             <form class="d-flex position-absolute top-50 end-0 translate-middle-y">
                 <input class="form-control me-2" type="search" placeholder="輸入關鍵字" aria-label="Search">
-                <button class="btn btn-outline-success text-nowrap" type="submit">搜尋<i class="bi bi-search"></i></button>
+                <button class="btn btn-outline-success text-nowrap" type="submit">搜尋 <i class="bi bi-search"></i></button>
             </form>
 
         </div>
