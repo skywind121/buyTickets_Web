@@ -1,9 +1,9 @@
 <?php
     include "db_conn.php";
     
-    if (!isset($_SESSION['login_user'])) {
-        session_start();
-    }
+    session_start();
+    error_reporting(E_ERROR | E_PARSE);
+    
     
     $user_check = $_SESSION['login_user'];
     //echo $user_check;
