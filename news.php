@@ -36,11 +36,14 @@
 
 	<br><br>
 	<h1>公告</h1>
-	<table class="table table-striped">
-		<tr>
-			<td style="text-align:center">標題</td>
-			<td style="text-align:center">内容</td>
-		</tr>
+	<table class="table table-bordered">
+        <thead>
+            <tr>
+                <td style="text-align:center " width="20%">標題</td>
+                <td style="text-align:center " width="80%">内容</td>
+            </tr>
+        </thead>
+		
 		<?php
 		foreach ($result as $row) {
 			echo "<tr>
