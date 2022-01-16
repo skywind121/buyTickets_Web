@@ -41,7 +41,7 @@
     <?php include "topButton.php"; ?>
 
     <div class="wrapper">
-        <h1><b>舉辦活動</b></h1>
+        <h1><b>修改活動</b></h1>
         <p>請先輸入完整資訊以舉辦新的活動。</p>
 
         <?php
@@ -71,6 +71,7 @@
             <div class="form-group">
                 <input type="submit" class="btn btn-outline-warning btn-lg" value="確定修改">
                 <input type="reset" class="btn btn-outline-secondary btn-lg" value="重設">
+                <button type="button" class="btn btn-outline-secondary btn-lg" value="取消">
             </div><br>
         </form>
     </div>
