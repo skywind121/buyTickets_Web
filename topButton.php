@@ -56,7 +56,7 @@
                 if (isset($_SESSION['login_user'])) {
                     echo "<li class='nav-item navbar-brand' aria-current='page'>
                             <span class='h3 mx-1'><b>
-                                您好，";            
+                                您好，";
                     echo $user_check;
                     echo "</b></span></li>";
                     echo "<a href = 'logout.php'>登出</a>";
@@ -68,7 +68,7 @@
                 }
 
                 ?>
-                
+
 
             </ul>
 
@@ -76,7 +76,7 @@
                 <input class="form-control me-2" type="search" placeholder="輸入關鍵字" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
-            
+
         </div>
 
 
