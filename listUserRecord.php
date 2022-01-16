@@ -23,7 +23,6 @@
 
 	<?php
 	include "topButton.php";
-	// $query = "SELECT * FROM ((records INNER JOIN events) INNER JOIN users) WHERE username = $user_check";
 	$query = "SELECT * FROM ((records NATURAL JOIN events) NATURAL JOIN users) WHERE username = '$user_check'";
 	if ($stmt = $db->query($query)) {
 		$result = $stmt->fetch_all();
@@ -46,6 +45,13 @@
 		}
 		?>
 	</table>
+    <h3>Total: $<?php 
+    $query = "SELECT SUM(totalPrice) FROM ((records NATURAL JOIN events) NATURAL JOIN users) WHERE username = '$user_check'";
+	if ($stmt = $db->query($query)) {
+		$result = $stmt->fetch_all();
+        echo $result[0][0];
+	}
+    ?></h3>
 </body>
 
 </html>
